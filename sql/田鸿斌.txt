@@ -1,0 +1,143 @@
+drop database if exists test;
+create database test;
+use test; -- 应用test数据库
+
+drop table if exists t_stores;
+create table t_stores(
+gongyings int primary key auto_increment,-- 编号，自动自动增长
+Danjutime varchar(20)  null, -- 班级名
+Gongyingsdizhi varchar(20)  null, 	
+Danjuhaoma int  null,		
+Dindanleix varchar(20)  null,	
+Bibie varchar(20)  null,		
+Shui varchar(20)  null,		
+Huilv varchar(20)  null,		
+Dankuang varchar(20)  null,		
+Dizhi varchar(20)  null,		
+Caigou varchar(20)  null,			
+Zhidan varchar(20)  null,		
+Bumen varchar(20)  null,		
+Fuhe varchar(20)  null,		
+Suoshu varchar(20)  null,		
+Biaotou varchar(20)  null,		
+Biaowei varchar(20)  null,		
+Zidinyi varchar(20)  null,		
+Zidiner varchar(20)  null,		
+Beuzhu varchar(20)  null,		
+Ks varchar(20)  null 		
+);
+GO
+
+drop table if exists t_store_io;
+create table t_store_io(
+Id int primary key auto_increment,  
+Bianhao varchar(20)  NULL, 
+Wuliaomc  varchar(20)  NULL,
+Xinhao	varchar(20)  NULL,
+Mc	varchar(20)  NULL,
+Shul	Int  NULL,
+Danjia	Int  NULL,
+Zheshu	Int  NULL,
+Danj	Int  NULL,
+Money	Int  NULL,
+Shuil	varchar(20)  NULL,
+Shuie	varchar(20)  NULL,
+Hanshuimonet	varchar(20)  NULL,
+Yuru	varchar (20)  NULL,
+Weiruk	Int  NULL,
+Zengpin	varchar(20)  NULL,
+Fenlu	varchar(20)  NULL,
+Laiyuan	varchar(20)  NULL,
+Danhao	varchar(20)  NULL,
+Sj	varchar(20)  NULL
+);
+GO
+
+drop table if exists Caigou;
+create table Caigou(
+Qinggou VARCHAR(20) primary key ,
+Danjutime varchar(20)  ,
+Danjuhaoma int  null,  
+Dankuang varchar(20) ,
+Qingg	varchar(20) ,
+Zhidan	varchar(20) ,
+Fuhe	varchar(20) ,
+Bumen	varchar(20) ,
+Biaotou	varchar(20) ,
+Biaowei	varchar(20) ,
+Zidinyi	varchar(20) ,
+Zidiner	varchar(20) ,
+Beuzhu	varchar(20) ,
+Jdsa	varchar(20)  
+);
+GO
+
+drop table if exists xiangbiao;
+create table xiangbiao(
+Id	int primary key auto_increment,-- 栏号，自动自动增长
+Bianhao	varchar(20)  NULL,-- 物料编号
+Wuliaomc varchar(20)  NULL,-- 物料名称
+Xinhao	varchar(20)  NULL,-- 规格型号
+Mc	varchar(20)  NULL,-- 单位名称
+Shul	Int  NULL,-- 数量
+Bibie	Int  NULL,-- 币别
+Jinjia	Int  NULL,-- 标准进价
+Money	Int  NULL,-- 标准进价金额
+Danjia	varchar(20)  NULL,-- 单价
+Jiner	varchar(20)  NULL,-- 进价金额
+Xuqiu	varchar(20)  NULL,-- 需求日期
+Jiany	varchar(20)  NULL,-- 建议采购日期
+Caigoul	Int  NULL,-- 未采购量
+Fenlu	varchar(20)  NULL, -- 分录备注	
+Laiyuan	varchar(20)  NULL,-- 来源单别
+Danhao	varchar(20)  NULL,-- 来源单号
+Js	varchar(20) NULL-- 6666
+);
+go
+
+drop TABLE if exists xunjiadan;
+create table xunjiadan(
+gongyings VARCHAR(20)  null primary key,-- 供应商
+Danjutime	varchar(20)  null,	-- 单据日期	
+Gongyingsdizhi	varchar(20)  null,	-- 供应商地址	
+Danjuhaoma	Int  null,-- 单据号码
+Times	varchar(20)  null,-- 有效日期
+Bibie	varchar(20)  null,-- 币别
+Shui	varchar(20)  null,-- 单价是否含税
+Huilv	varchar(20)  null,-- 汇率
+Dankuang varchar(20) null,-- 单况
+Dizhi	varchar(20)  null,-- 送货地址
+Caigou	varchar(20)  null,-- 采购人员
+Zhidan	varchar(20)  null,-- 制单人员
+Bumen	varchar(20)  null,-- 所属部门
+Fuhe	varchar(20)  null,-- 复核人员
+Suoshu	varchar(20)  null,-- 所属项目
+Biaotou	varchar(20)  null,-- 表头条文
+Biaowei	varchar(20)  null,-- 表尾条文
+Zidinyi	varchar(20)  null,-- 自定栏一
+Zidiner	varchar(20)  null,-- 自定栏二
+Beuzhu	varchar(20)  null,-- 备注
+Nsn	varchar(20)  null,-- 6
+Jsjs	varchar(20)  null-- 666
+);
+go
+
+drop table if exists xunjia;
+create table xunjia(
+Id	Int primary key auto_increment,		-- 栏号											
+Bianhao	varchar(20)  null,			-- 物料编号											
+Wuliaomc varchar(20)  null,			-- 物料名称												
+Xinhao	varchar(20)  null,			-- 规格型号											
+Mc	varchar(20)  null,			-- 单位名称												
+Shul	Int  null,				-- 数量												
+Zhekou	Int  null,				-- 折扣前单价											
+Danjia	varchar(20)  null,			-- 单价													
+Jine	varchar(20)  null,			-- 金额												
+Zhehsu	varchar(20)  null,			-- 折数																			
+Shuil	varchar(20)  null,			-- 税率													
+Shuier	Int  null,				-- 税额														
+Fenlu	varchar(20)  null,			-- 分录备注														
+Hanshui	varchar(20)  null,			-- 含税金额															
+Zengp	varchar(20)  null,			-- 赠品														
+Js	varchar(20)  null			-- 6666														
+);

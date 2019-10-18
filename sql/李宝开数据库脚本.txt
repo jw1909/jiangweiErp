@@ -1,0 +1,84 @@
+drop database if exists test;
+create database test;.
+use test;
+drop table if exists class;
+
+create table chuku(
+id int PRIMARY key, -- 编号，主键,
+CustName NVARCHAR(50), -- 客户,
+BillDate Date, -- 单据日期,
+AddrName NVARCHAR(50), -- 发货地址,
+BillNO NVARCHAR(50), -- 单据号码,
+SaleClassName NVARCHAR(50), -- 销售出库类型,
+currname NVARCHAR(50), -- 币别
+PriceofTax bit, -- 单价是否含税
+ExchRate float, -- 汇率
+WareName NVARCHAR(50), -- 仓库
+HasForeignTeade NVARCHAR(50), -- 国外贸易
+VoucherNO NVARCHAR(50),  -- 凭证编号
+HasAutoTnv bit, -- 复核时是否自动生成发票
+SalesName NVARCHAR(50), -- 业务人员
+Maker NVARCHAR(50), -- 制单人员
+Depayid NVARCHAR(50), -- 所属部门
+Permitter NVARCHAR(50), -- 复核人员
+ProectName NVARCHAR(50), -- 所属项目
+Remark NVARCHAR(50), -- 备注
+AddField1 NVARCHAR(50), -- 自定义栏1
+AddField2 NVARCHAR(50), -- 自定义栏2
+ABC NVARCHAR(50), -- 备用字段1
+BCD NVARCHAR(50), -- 备用字段2
+CDE NVARCHAR(50) -- 备用字段3
+);
+
+create TABLE tuihuo(
+id int PRIMARY key, -- 编号，主键,
+CustName NVARCHAR(50), -- 客户,
+BillDate Date, -- 单据日期,
+AddrName NVARCHAR(50), -- 发货地址,
+BillNO NVARCHAR(50), -- 单据号码,
+SaleClassName NVARCHAR(50), -- 销售出库类型,
+currname NVARCHAR(50), -- 币别
+PriceofTax bit, -- 单价是否含税
+ExchRate float, -- 汇率
+WareName NVARCHAR(50), -- 仓库
+HasForeignTeade NVARCHAR(50), -- 国外贸易
+VoucherNO NVARCHAR(50),  -- 凭证编号
+IsDeduct bit, -- 重新出库
+SalesName NVARCHAR(50), -- 业务人员
+Maker NVARCHAR(50), -- 制单人员
+Depayid NVARCHAR(50), -- 所属部门
+Permitter NVARCHAR(50), -- 复核人员
+ProectName NVARCHAR(50), -- 所属项目
+Remark NVARCHAR(50), -- 备注
+AddField1 NVARCHAR(50), -- 自定义栏1
+AddField2 NVARCHAR(50), -- 自定义栏2
+ABC NVARCHAR(50), -- 备用字段1
+BCD NVARCHAR(50), -- 备用字段2
+CDE NVARCHAR(50) -- 备用字段3
+);
+
+create TABLE xiangbiao(
+Number int PRIMARY key, -- 编号，主键
+ProdID NVARCHAR(50), -- 物料编号
+ProdName NVARCHAR(50), -- 物料名称
+prodsize NVARCHAR(50), -- 规格型号
+StdUnitName NVARCHAR(50), -- 单位名称
+SumNum int, -- 数量
+discountunitprice float, -- 折扣前单价
+RateOfDiscount float, -- 折数
+price FLOAT, -- 单价
+moeny float, -- 金额
+BusiTaxRate FLOAT, -- 税率
+Tax float, -- 税额
+taxprice float,-- 含税金额
+batchUsed int, -- 批号
+gift NVARCHAR(50), -- 赠品
+Invoicedetails NVARCHAR(50), -- 发票明细
+weikaipiao int, -- 未开票数量
+brmack NVARCHAR(50), -- 分录备注
+laiyuandanbie NVARCHAR(50), -- 来源单别
+laiyuandanhao NVARCHAR(50), -- 来源单号
+ABC NVARCHAR(50), -- 备用字段1
+BCD NVARCHAR(50), -- 备用字段2
+CDE NVARCHAR(50) -- 备用字段3
+);

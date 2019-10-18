@@ -1,0 +1,143 @@
+ 
+create table caigouruku_Main(
+CustID	        nvarchar(50)	   primary key,   -- 供应商
+AddrID	        nvarchar(50)       not null ,	-- 供应商地址
+BillNo	        nvarchar(50)       not null ,   -- 单据号码
+BillDate        Datetime	   not null ,	-- 单据日期
+SaleClassID     nvarchar(50)       not null ,	-- 采购入库类型
+CurrID	        nvarchar(50)       not null ,	-- 币别
+PriceofTax      nvarchar(50)	   not null ,	-- 单价是否含税
+ExchRate        nvarchar(50)	   not null ,	-- 汇率
+WareID	        nvarchar(50)	   not null ,	-- 仓库
+HasForeignTrade	nvarchar(50)	   not null ,	-- 国外贸易(是否)
+ProofNumber	Int		   not null ,	-- 凭证编号
+AddField1	nvarchar(50)	   not null ,	-- 自定义栏一
+AddField2	nvarchar(50)	   not null ,	-- 自定义栏二
+Remark		nvarchar(200)	   not null ,	-- 备注
+SalesID		nvarchar(50)       not null ,	-- 采购人员
+Maker		nvarchar(50)	   not null ,	-- 制单人员
+Permitter	nvarchar(50)	   not null ,	-- 复核人员
+DepartID	nvarchar(50)	   not null ,	-- 所属部门
+ProjectID	nvarchar(50)       not null	-- 所属项目
+)comment = "采购入库主表";
+
+
+-- 创建一个采购入库详表
+-- 如果存在采购入库详表caigouruku_ Details，则删除采购入库详表caigouruku_ Details
+drop table if exists caigouruku_Details;
+create table caigouruku_Details(
+SerNo		nvarchar(50)	primary key ,	-- 栏号
+ProdID		nvarchar(50)	primary key ,	-- 物料编号
+ProdName	nvarchar(50)	not null ,	-- 物料名称
+ProdSize	nvarchar(50)	not null ,	-- 规格型号
+Sunit		nvarchar(50)	not null ,	-- 单位名称
+SQuantity	Int		not null ,	-- 数量
+OldPrice	Decimal		not null ,	-- 折扣前单价
+Discount	Int		not null ,	-- 折数
+SPrice		Decimal		not null ,	-- 单价
+Amount		Decimal		not null ,	-- 金额
+TaxRate		Decimal		not null ,	-- 税率
+TaxAmt		Decimal		not null ,	-- 税额
+AmountATax	Decimal		not null ,	-- 含税金额
+HaveBatch	nvarchar(50)	not null ,	-- 批号
+IsGift		nvarchar(50)	not null ,	-- 赠品
+HasInv		nvarchar(50)	not null ,	-- 发票明细
+NotInvCount	Int		not null ,	-- 未开票数量
+ItemRemark	nvarchar(50)	not null ,	-- 分录备注
+TranType	nvarchar(50)	not null ,	-- 来源单别
+PromNO		nvarchar(50)	not null ,	-- 来源单号
+MLAppFare	Decimal		not null 	-- 分摊费用
+)comment = "采购入库详表";
+
+-- 创建一个采购分摊作业主表
+-- 如果存在采购分摊作业主表caigoufentan_Main，则删除采购分摊作业主表caigoufentan_Main
+drop table if exists caigoufentan_Main;
+create table caigoufentan_Main(
+BillNo		nvarchar(50)    null primary key,	-- 单据号码
+BillDate	Datetime	not null,	-- 单据日期
+AssignStyle	nvarchar(50)	not null,	-- 分摊方式
+ProofNumber	nvarchar(50)	not null,	-- 凭证编号
+WaitAmount	nvarchar(50)	not null,	-- 待摊金额本位币
+Maker		nvarchar(50)	not null,	-- 制单人员
+Permitter	nvarchar(50)	not null	-- 复核人员
+)comment = "采购分摊作业主表";
+
+-- 创建一个采购分摊作业详表
+-- 如果存在采购分摊作业详表caigoufentan_Details，则删除采购分摊作业主表caigoufentan_Details
+drop table if exists caigoufentan_Details;
+create table caigoufentan_Details(
+SerNo		nvarchar(50)	not null primary key,	-- 栏号
+CostID		nvarchar(50)	not null primary key,	-- 费用编号
+CostName	nvarchar(50)	not null ,	-- 费用名称
+CurrID		nvarchar(50)	not null ,	-- 币别
+ExchRate	nvarchar(50)	not null ,	-- 汇率
+Amount		Decimal		not null ,	-- 金额
+LocalAmount	nvarchar(50)	not null ,	-- 金额本位币
+SaleClassNO	nvarchar(50)	not null ,	-- 采购入库单号
+ProdID		nvarchar(50)	not null ,	-- 物料编号
+ProdName	nvarchar(50)	not null ,	-- 物料名称
+ProdSize	nvarchar(50)	not null ,	-- 规格型号
+SaleAmount	Decimal		not null ,	-- 采购金额
+Quantity	Int		not null ,	-- 数量
+Sunit	        nvarchar(50)	not null ,	-- 单位
+Weight		nvarchar(50)	not null ,	-- 重量
+Volume		nvarchar(50)	not null ,	-- 材积
+MLAmount	Decimal		not null	-- 分摊金额
+)comment = "采购分摊作业详表";
+
+
+-- 创建一个采购退货主表
+-- 如果存在采购退货主表caigoutuihuo_Main，则删除采购退货主表caigoutuihuo_Main
+drop table if exists caigoutuihuo_Main;
+create table caigoutuihuo_Main(
+CustID		nvarchar(50)	not null primary key,	-- 供应商
+AddrID		nvarchar(50)	not null ,	-- 供应商地址
+BillNo		nvarchar(50)	not null ,	-- 单据号码
+BillDate	Datetime	not null ,	-- 单据日期
+SaleClassID	nvarchar(50)	not null ,	-- 采购入库类型
+CurrID		nvarchar(50)	not null ,	-- 币别
+PriceofTax	nvarchar(50)	not null ,	-- 单价是否含税
+ExchRate	nvarchar(50)	not null ,	-- 汇率
+WareID		nvarchar(50)	not null ,	-- 仓库
+HasForeignTrade	nvarchar(50)	not null ,	-- 国外贸易(是否)
+IsDeduct	nvarchar(50)	not null ,	-- 重新入库
+ProofNumber	Int		not null ,	-- 凭证编号
+AddField1	nvarchar(50)	not null ,	-- 自定义栏一
+AddField2	nvarchar(50)	not null ,	-- 自定义栏二
+Remark		nvarchar(200)	not null ,	-- 备注
+SalesID		nvarchar(50)	not null ,	-- 采购人员
+Maker		nvarchar(50)	not null ,	-- 制单人员
+Permitter	nvarchar(50)	not null ,	-- 复核人员
+DepartID	nvarchar(50)	not null ,	-- 所属部门
+ProjectID	nvarchar(50)	not null 	-- 所属项目
+)comment = "采购退货主表";
+
+-- 创建一个采购退货详表
+-- 如果存在采购退货详表caigoutuihuo_ Details，则删除采购分摊作业主表caigoutuihuo_ Details
+drop table if exists caigoutuihuo_Details;
+create table caigoutuihuo_Details(
+SerNo		nvarchar(50)	not null primary key ,	-- 栏号
+ProdID		nvarchar(50)	primary key ,	-- 物料编号
+ProdName	nvarchar(50)	not null ,	-- 物料名称
+ProdSize	nvarchar(50)	not null ,	-- 规格型号
+Sunit		nvarchar(50)	not null ,	-- 单位名称
+SQuantity	Int		not null ,	-- 数量
+OldPrice	Decimal		not null ,	-- 折扣前单价
+Discount	Int		not null ,	-- 折数
+SPrice		Decimal		not null ,	-- 单价
+Amount		Decimal		not null ,	-- 金额
+TaxRate		Decimal		not null ,	-- 税率
+TaxAmt		Decimal		not null ,	-- 税额
+AmountATax	Decimal		not null ,	-- 含税金额
+HaveBatch	nvarchar(50)	not null ,	-- 批号
+IsGift		nvarchar(50)	not null ,	-- 赠品
+HasInv		nvarchar(50)	not null ,	-- 发票明细
+NotInvCount	Int		not null ,	-- 未开票数量
+ItemRemark	nvarchar(50)	not null ,	-- 分录备注
+TranType	nvarchar(50)	not null ,	-- 来源单别
+PromNO		nvarchar(50)	not null 	-- 来源单号
+)comment = "采购退货详表";
+
+
+
+ 

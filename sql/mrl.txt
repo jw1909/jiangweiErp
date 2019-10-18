@@ -1,0 +1,98 @@
+drop database if exists test;
+create database text;
+use test; -- 应用test数据库
+-- 创建一个班级表
+drop table if exists class;
+
+create table tiaobodan(
+SerNo int primary key, -- 主键栏号
+MoveDate Varchar(50), -- 单据日期
+MoveNo	int, -- 单据号码
+Maker	Varchar(50), -- 制单人员
+Permitter Varchar(50), -- 复核人员
+WareOutID Int, -- 调出仓库
+WareID	Int -- 调入仓库
+);
+
+create table tiaobodan2(
+SerNo	int primary key, -- 主键栏号
+ProdID	Varchar(50), -- 物料编号
+PrdClassName Varchar(50), -- 物料名称
+ProdSize Varchar(50), -- 规格型号
+Unit	Varchar(50), -- 单位
+Quantity int, -- 数量
+BatchID	Varchar(50), -- 批号
+ItemRemark Varchar(50) -- 分录备用
+);
+
+create table tiaojiadan(
+MoveDate Varchar(50), -- 单据日期
+SerNo	int primary key, -- 主键栏号
+MoveNo	int, -- 单据号码
+Maker	Varchar(50), -- 制单人员
+Permitter Varchar(50), -- 复核人员
+IncSubjectID	Varchar(50), -- 增值科目
+DecSujectID	Varchar(50), -- 减值科目
+VoucherNo Varchar(50), -- 凭证编号
+TZFShi	Varchar(50) -- 调整方式
+);
+
+create table tiaojiadan2(
+SerNo	int primary key, -- 主键栏号
+ProdID	Varchar(50), -- 物料编号
+PrdClassName Varchar(50), -- 物料名称
+ProdSize Varchar(50), -- 规格型号
+Unit	Varchar(50), -- 单位
+CurQty	int, -- 库存量
+LCostAvg Varchar(50), -- 平均成本
+Price	Varchar(50), -- 单价
+Amount	Varchar(50), -- 调价金额
+ItemRemark Varchar(50) -- 分录备用
+);
+
+create table pandiandan(
+MoveDate Varchar(50), -- 单据日期
+SerNo	int primary key, -- 主键栏号
+MoveNo	int, -- 单据号码
+Maker	Varchar(50), -- 制单人员
+Permitter Varchar(50), -- 复核人员
+IncSubjectID	Varchar(50), -- 增值科目
+DecSujectID	Varchar(50), -- 减值科目
+VoucherNo Varchar(50), -- 凭证编号
+WareID	Varchar(50), -- 盘点仓库
+SalesID	Varchar(50), -- 盘点人员
+DepartID Varchar(50) -- 所属部门
+);
+
+create table pandiandan2(
+SerNo	int primary key, -- 主键栏号
+ProdID	Varchar(50), -- 物料编号
+PrdClassName Varchar(50), -- 物料名称
+ProdSize Varchar(50), -- 规格型号
+Unit	Varchar(50), -- 单位
+CurQty	int, -- 账面数量
+CheckQty int, -- 盘点数量
+Quantity int, -- 盈亏数量
+Price	Varchar(50), -- 单价
+Amount	Varchar(50), -- 盈亏金额
+HaveBatch Varchar(50), -- 批号
+ItemRemark Varchar(50) -- 原因
+);
+
+create table cangkubiao(
+CKBHao int primary key, -- 主键仓库编号
+CKMCheng Varchar(50), -- 仓库名称
+LXRYuan Varchar(50), -- 联系人员
+LXDHua Varchar(50), -- 联系电话
+CKDZhi Varchar(50), -- 仓库地址
+BZu Varchar(50) -- 备注
+);
+
+create table cangkubiao2(
+CKBHao int primary key, -- 主键仓库编号
+WLBHao int primary key, -- 物料编号
+WLSLiang int, -- 物料数量
+BYZD1 Varchar(50), -- 备用字段1
+BYZD2 Varchar(50), -- 备用字段2
+BYZD3 Varchar(50) -- 备用字段3
+);
