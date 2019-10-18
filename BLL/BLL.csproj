@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{165B8D95-B1B2-434C-A2B1-B915A4A04F2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaiGou\CG_DinDanManager.cs" />
+    <Compile Include="CaiGou\CG_FaPiaoManager.cs" />
+    <Compile Include="CaiGou\CG_FenTanManager.cs" />
+    <Compile Include="CaiGou\CG_QingGouManager.cs" />
+    <Compile Include="CaiGou\CG_RuKuManager.cs" />
+    <Compile Include="CaiGou\CG_TuiHuoManager.cs" />
+    <Compile Include="CaiGou\CG_XunJiaManager.cs" />
+    <Compile Include="CaiGou\CG_YingFuChongKuanManager.cs" />
+    <Compile Include="CaiGou\CG_YuFuChongKuanManager.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="JiBen\JB_BuMenManager.cs" />
+    <Compile Include="JiBen\JB_CangKuManager.cs" />
+    <Compile Include="JiBen\JB_DanJuTypeManager.cs" />
+    <Compile Include="JiBen\JB_GYS_Manager.cs" />
+    <Compile Include="JiBen\JB_GYS_typeManager.cs" />
+    <Compile Include="JiBen\JB_JiLiangDanWeiManager.cs" />
+    <Compile Include="JiBen\JB_KeHuZiLiaoManager.cs" />
+    <Compile Include="JiBen\JB_RenYuanZhuWenJianManager.cs" />
+    <Compile Include="JiBen\JB_WuLiaoTypeManager.cs" />
+    <Compile Include="JiBen\JB_WuLiaoWeiHuManager.cs" />
+    <Compile Include="JiBen\JB_WuLiaoZhuWenJianManager.cs" />
+    <Compile Include="KuCun\KC_DiaoBoManager.cs" />
+    <Compile Include="KuCun\KC_PanDianManager.cs" />
+    <Compile Include="KuCun\KC_TiaoJiaManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XiaoShou\XS_ChuKuManager.cs" />
+    <Compile Include="XiaoShou\XS_DinDanManager.cs" />
+    <Compile Include="XiaoShou\XS_FaPiaoManager.cs" />
+    <Compile Include="XiaoShou\XS_TuiHuoManager.cs" />
+    <Compile Include="XiaoShou\XS_YingShouChongKuanManager.cs" />
+    <Compile Include="XiaoShou\XS_YuShouKuanManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{de36aa05-3f95-4f48-8737-a580fa060d03}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{c62a99ff-cf08-41c9-9407-c1d1cdca9795}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

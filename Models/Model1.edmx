@@ -1,0 +1,2058 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="erpModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="erpModelStoreContainer">
+          <EntitySet Name="caigou" EntityType="erpModel.Store.caigou" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="caigoufentan_main" EntityType="erpModel.Store.caigoufentan_main" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="caigouruku_main" EntityType="erpModel.Store.caigouruku_main" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="caigoutuihuo_main" EntityType="erpModel.Store.caigoutuihuo_main" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="cangkubiao" EntityType="erpModel.Store.cangkubiao" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="cangkubiao2" EntityType="erpModel.Store.cangkubiao2" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="chuku" EntityType="erpModel.Store.chuku" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="custbill" EntityType="erpModel.Store.custbill" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="lbkxiangbiao" EntityType="erpModel.Store.lbkxiangbiao" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="mxotherdepots" EntityType="erpModel.Store.mxotherdepots" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="mxotherwarehousing" EntityType="erpModel.Store.mxotherwarehousing" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="mxsalesorder" EntityType="erpModel.Store.mxsalesorder" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="mxsalesquotations" EntityType="erpModel.Store.mxsalesquotations" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="otherdepots" EntityType="erpModel.Store.otherdepots" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="otherwarehousing" EntityType="erpModel.Store.otherwarehousing" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="salesorder" EntityType="erpModel.Store.salesorder" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="salesquotations" EntityType="erpModel.Store.salesquotations" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="t_store_io" EntityType="erpModel.Store.t_store_io" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="t_stores" EntityType="erpModel.Store.t_stores" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tb_xiaoshoufapiaod" EntityType="erpModel.Store.tb_xiaoshoufapiaod" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tb_xiaoshoufapiaonrd" EntityType="erpModel.Store.tb_xiaoshoufapiaonrd" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tb_yingshouchogkuand" EntityType="erpModel.Store.tb_yingshouchogkuand" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tb_yingshouchogkuandnr" EntityType="erpModel.Store.tb_yingshouchogkuandnr" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tb_yushoukuand" EntityType="erpModel.Store.tb_yushoukuand" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="tuihuo" EntityType="erpModel.Store.tuihuo" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="xbiao" EntityType="erpModel.Store.xbiao" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="xiangbiao" EntityType="erpModel.Store.xiangbiao" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="xunjia" EntityType="erpModel.Store.xunjia" store:Type="Tables" Schema="erp" />
+          <EntitySet Name="xunjiadan" EntityType="erpModel.Store.xunjiadan" store:Type="Tables" Schema="erp" />
+        </EntityContainer>
+        <EntityType Name="caigou">
+          <Key>
+            <PropertyRef Name="Qinggou" />
+          </Key>
+          <Property Name="Qinggou" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Danjutime" Type="varchar" MaxLength="20" />
+          <Property Name="Danjuhaoma" Type="int" />
+          <Property Name="Dankuang" Type="varchar" MaxLength="20" />
+          <Property Name="Qingg" Type="varchar" MaxLength="20" />
+          <Property Name="Zhidan" Type="varchar" MaxLength="20" />
+          <Property Name="Fuhe" Type="varchar" MaxLength="20" />
+          <Property Name="Bumen" Type="varchar" MaxLength="20" />
+          <Property Name="Biaotou" Type="varchar" MaxLength="20" />
+          <Property Name="Biaowei" Type="varchar" MaxLength="20" />
+          <Property Name="Zidinyi" Type="varchar" MaxLength="20" />
+          <Property Name="Zidiner" Type="varchar" MaxLength="20" />
+          <Property Name="Beuzhu" Type="varchar" MaxLength="20" />
+          <Property Name="Jdsa" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="caigoufentan_main">
+          <Key>
+            <PropertyRef Name="BillNo" />
+          </Key>
+          <Property Name="BillNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillDate" Type="datetime" Nullable="false" />
+          <Property Name="AssignStyle" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProofNumber" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="WaitAmount" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="caigouruku_main">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddrID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillDate" Type="datetime" Nullable="false" />
+          <Property Name="SaleClassID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurrID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriceofTax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ExchRate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="WareID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="HasForeignTrade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProofNumber" Type="int" Nullable="false" />
+          <Property Name="AddField1" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddField2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SalesID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepartID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="caigoutuihuo_main">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddrID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillDate" Type="datetime" Nullable="false" />
+          <Property Name="SaleClassID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurrID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriceofTax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ExchRate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="WareID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="HasForeignTrade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsDeduct" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProofNumber" Type="int" Nullable="false" />
+          <Property Name="AddField1" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AddField2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SalesID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepartID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cangkubiao">
+          <Key>
+            <PropertyRef Name="CKBHao" />
+          </Key>
+          <Property Name="CKBHao" Type="int" Nullable="false" />
+          <Property Name="CKMCheng" Type="varchar" MaxLength="50" />
+          <Property Name="LXRYuan" Type="varchar" MaxLength="50" />
+          <Property Name="LXDHua" Type="varchar" MaxLength="50" />
+          <Property Name="CKDZhi" Type="varchar" MaxLength="50" />
+          <Property Name="BZu" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cangkubiao2">
+          <Key>
+            <PropertyRef Name="CKBHao" />
+          </Key>
+          <Property Name="CKBHao" Type="int" Nullable="false" />
+          <Property Name="WLBHao" Type="int" />
+          <Property Name="WLSLiang" Type="int" />
+          <Property Name="BYZD1" Type="varchar" MaxLength="50" />
+          <Property Name="BYZD2" Type="varchar" MaxLength="50" />
+          <Property Name="BYZD3" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="chuku">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="CustName" Type="varchar" MaxLength="50" />
+          <Property Name="BillDate" Type="date" />
+          <Property Name="AddrName" Type="varchar" MaxLength="50" />
+          <Property Name="BillNO" Type="varchar" MaxLength="50" />
+          <Property Name="SaleClassName" Type="varchar" MaxLength="50" />
+          <Property Name="currname" Type="varchar" MaxLength="50" />
+          <Property Name="PriceofTax" Type="bit" />
+          <Property Name="ExchRate" Type="float" />
+          <Property Name="WareName" Type="varchar" MaxLength="50" />
+          <Property Name="HasForeignTeade" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherNO" Type="varchar" MaxLength="50" />
+          <Property Name="HasAutoTnv" Type="bit" />
+          <Property Name="SalesName" Type="varchar" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" MaxLength="50" />
+          <Property Name="Depayid" Type="varchar" MaxLength="50" />
+          <Property Name="Permitter" Type="varchar" MaxLength="50" />
+          <Property Name="ProectName" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="50" />
+          <Property Name="AddField1" Type="varchar" MaxLength="50" />
+          <Property Name="AddField2" Type="varchar" MaxLength="50" />
+          <Property Name="ABC" Type="varchar" MaxLength="50" />
+          <Property Name="BCD" Type="varchar" MaxLength="50" />
+          <Property Name="CDE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="custbill">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BillDate" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Billno" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FundBillNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriceOftax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InvoiceNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AffirmState" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InvotypeId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="VoucherNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurrID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CVoucherNO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ExchRate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Salesman" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DeptID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UDef1" Type="varchar" MaxLength="50" />
+          <Property Name="UDef2" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="lbkxiangbiao">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="ProdID" Type="varchar" MaxLength="50" />
+          <Property Name="ProdName" Type="varchar" MaxLength="50" />
+          <Property Name="prodsize" Type="varchar" MaxLength="50" />
+          <Property Name="StdUnitName" Type="varchar" MaxLength="50" />
+          <Property Name="SumNum" Type="int" />
+          <Property Name="discountunitprice" Type="float" />
+          <Property Name="RateOfDiscount" Type="float" />
+          <Property Name="price" Type="float" />
+          <Property Name="moeny" Type="float" />
+          <Property Name="BusiTaxRate" Type="float" />
+          <Property Name="Tax" Type="float" />
+          <Property Name="taxprice" Type="float" />
+          <Property Name="batchUsed" Type="int" />
+          <Property Name="gift" Type="varchar" MaxLength="50" />
+          <Property Name="Invoicedetails" Type="varchar" MaxLength="50" />
+          <Property Name="weikaipiao" Type="int" />
+          <Property Name="brmack" Type="varchar" MaxLength="50" />
+          <Property Name="laiyuandanbie" Type="varchar" MaxLength="50" />
+          <Property Name="laiyuandanhao" Type="varchar" MaxLength="50" />
+          <Property Name="ABC" Type="varchar" MaxLength="50" />
+          <Property Name="BCD" Type="varchar" MaxLength="50" />
+          <Property Name="CDE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="mxotherdepots">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdSize" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SUnit" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="sQuantity" Type="int" Nullable="false" />
+          <Property Name="HaveBatch" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemRemark" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mxotherwarehousing">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdSize" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SUnit" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="sQuantity" Type="int" Nullable="false" />
+          <Property Name="HaveBatch" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemRemark" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mxsalesorder">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdSize" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SUnit" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="sQuantity" Type="int" Nullable="false" />
+          <Property Name="OldPrice" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Discount" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="sPrice" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VFTotal" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PreInDate" Type="date" Nullable="false" />
+          <Property Name="QtyRemain" Type="int" Nullable="false" />
+          <Property Name="IsGift" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemRemark" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="HasCombine" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TranType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FromNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ManuQty" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxsalesquotations">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdBusiTaxRate" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemRemark" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="IsGift" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Discount" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TaxAmt" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="UniName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Price" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OldPrice" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SQuantity" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="sPrice" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VFTotal" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SumBTaxAmt" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SumTax" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SumAmtATax" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdSize" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="otherdepots">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AdjustDate" Type="date" Nullable="false" />
+          <Property Name="WareName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillStyleName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SumQty" Type="int" Nullable="false" />
+          <Property Name="DepartName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Udef1" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Udef2" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SerNO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="otherwarehousing">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AdjustDate" Type="date" Nullable="false" />
+          <Property Name="WareName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VoucherNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillStyleName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SumQty" Type="int" Nullable="false" />
+          <Property Name="DepartName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Udef1" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Udef2" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SerNO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="salesorder">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillDate" Type="date" Nullable="false" />
+          <Property Name="CustBillNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillStyleName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustCurrencyName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustMemo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustAddress" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DepartName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProjectName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ExchRate" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Permitter" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Maker" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="HeaderName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FooterName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserDef1" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserDef2" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillStatus" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PriceOfTax" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DueToFullName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PrepayDay" Type="date" Nullable="false" />
+          <Property Name="GatherStyle" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AccMoth" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="GatherDelay" Type="int" Nullable="false" />
+          <Property Name="SerNO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="salesquotations">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BillDate" Type="date" Nullable="false" />
+          <Property Name="FormalCust" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurCurrencyName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ExchRate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OutAddress" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriceOfTax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ValiDAte" Type="date" Nullable="false" />
+          <Property Name="HeaderName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FooterName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PsnUerDef1" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PsnUerDef2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustMemo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MakerName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PermitterName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepartName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SalesName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SerNO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_store_io">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="varchar" MaxLength="20" />
+          <Property Name="Wuliaomc" Type="varchar" MaxLength="20" />
+          <Property Name="Xinhao" Type="varchar" MaxLength="20" />
+          <Property Name="Mc" Type="varchar" MaxLength="20" />
+          <Property Name="Shul" Type="int" />
+          <Property Name="Danjia" Type="int" />
+          <Property Name="Zheshu" Type="int" />
+          <Property Name="Danj" Type="int" />
+          <Property Name="Money" Type="int" />
+          <Property Name="Shuil" Type="varchar" MaxLength="20" />
+          <Property Name="Shuie" Type="varchar" MaxLength="20" />
+          <Property Name="Hanshuimonet" Type="varchar" MaxLength="20" />
+          <Property Name="Yuru" Type="varchar" MaxLength="20" />
+          <Property Name="Weiruk" Type="int" />
+          <Property Name="Zengpin" Type="varchar" MaxLength="20" />
+          <Property Name="Fenlu" Type="varchar" MaxLength="20" />
+          <Property Name="Laiyuan" Type="varchar" MaxLength="20" />
+          <Property Name="Danhao" Type="varchar" MaxLength="20" />
+          <Property Name="Sj" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="t_stores">
+          <Key>
+            <PropertyRef Name="gongyings" />
+          </Key>
+          <Property Name="gongyings" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Danjutime" Type="varchar" MaxLength="20" />
+          <Property Name="Gongyingsdizhi" Type="varchar" MaxLength="20" />
+          <Property Name="Danjuhaoma" Type="int" />
+          <Property Name="Dindanleix" Type="varchar" MaxLength="20" />
+          <Property Name="Bibie" Type="varchar" MaxLength="20" />
+          <Property Name="Shui" Type="varchar" MaxLength="20" />
+          <Property Name="Huilv" Type="varchar" MaxLength="20" />
+          <Property Name="Dankuang" Type="varchar" MaxLength="20" />
+          <Property Name="Dizhi" Type="varchar" MaxLength="20" />
+          <Property Name="Caigou" Type="varchar" MaxLength="20" />
+          <Property Name="Zhidan" Type="varchar" MaxLength="20" />
+          <Property Name="Bumen" Type="varchar" MaxLength="20" />
+          <Property Name="Fuhe" Type="varchar" MaxLength="20" />
+          <Property Name="Suoshu" Type="varchar" MaxLength="20" />
+          <Property Name="Biaotou" Type="varchar" MaxLength="20" />
+          <Property Name="Biaowei" Type="varchar" MaxLength="20" />
+          <Property Name="Zidinyi" Type="varchar" MaxLength="20" />
+          <Property Name="Zidiner" Type="varchar" MaxLength="20" />
+          <Property Name="Beuzhu" Type="varchar" MaxLength="20" />
+          <Property Name="Ks" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tb_xiaoshoufapiaod">
+          <Key>
+            <PropertyRef Name="Kehu" />
+          </Key>
+          <Property Name="Kehu" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Danjuriqi" Type="varchar" MaxLength="50" />
+          <Property Name="Danjuleixing" Type="varchar" MaxLength="20" />
+          <Property Name="Danjuhaoma" Type="varchar" MaxLength="20" />
+          <Property Name="Shifouhanshui" Type="varchar" MaxLength="50" />
+          <Property Name="Fapiaohaoma" Type="varchar" MaxLength="50" />
+          <Property Name="Fapiaodizhi" Type="varchar" MaxLength="50" />
+          <Property Name="Fapiaoleixing" Type="varchar" MaxLength="50" />
+          <Property Name="Heduizhuangtai" Type="varchar" MaxLength="50" />
+          <Property Name="Bibie" Type="varchar" MaxLength="50" />
+          <Property Name="SRngzhengbianhao" Type="varchar" MaxLength="50" />
+          <Property Name="Huilv" Type="double" />
+          <Property Name="CBpingzhengbianhao" Type="varchar" MaxLength="50" />
+          <Property Name="Lanyi" Type="varchar" MaxLength="50" />
+          <Property Name="Laner" Type="varchar" MaxLength="50" />
+          <Property Name="Daochuriqi" Type="varchar" MaxLength="50" />
+          <Property Name="Daochurenyuan" Type="varchar" MaxLength="50" />
+          <Property Name="Beizhu" Type="varchar" MaxLength="200" />
+          <Property Name="Yewurenyuan" Type="varchar" MaxLength="50" />
+          <Property Name="Zhidanrenyuan" Type="varchar" MaxLength="50" />
+          <Property Name="Suoshubumen" Type="varchar" MaxLength="50" />
+          <Property Name="Fuherenyuan" Type="varchar" MaxLength="50" />
+          <Property Name="Suoshuxiangmu" Type="varchar" MaxLength="50" />
+          <Property Name="aaa" Type="varchar" MaxLength="50" />
+          <Property Name="bbb" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_xiaoshoufapiaonrd">
+          <Key>
+            <PropertyRef Name="Lanhao" />
+          </Key>
+          <Property Name="Lanhao" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Wuliaobianhao" Type="varchar" MaxLength="50" />
+          <Property Name="Wuliaomingcheng" Type="varchar" MaxLength="20" />
+          <Property Name="Guigexinghao" Type="varchar" MaxLength="20" />
+          <Property Name="Danweimingcheng" Type="varchar" MaxLength="50" />
+          <Property Name="Shuliang" Type="varchar" MaxLength="50" />
+          <Property Name="Danjia" Type="varchar" MaxLength="50" />
+          <Property Name="Jine" Type="varchar" MaxLength="50" />
+          <Property Name="Shuilv" Type="varchar" MaxLength="50" />
+          <Property Name="Shuie" Type="varchar" MaxLength="50" />
+          <Property Name="Hanshuijine" Type="varchar" MaxLength="50" />
+          <Property Name="Weichushuliang" Type="double" />
+          <Property Name="Dingdanhao" Type="varchar" MaxLength="50" />
+          <Property Name="Zengpin" Type="varchar" MaxLength="50" />
+          <Property Name="Beizhu" Type="varchar" MaxLength="50" />
+          <Property Name="aaa" Type="varchar" MaxLength="50" />
+          <Property Name="bbb" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_yingshouchogkuand">
+          <Key>
+            <PropertyRef Name="Kehu" />
+          </Key>
+          <Property Name="Kehu" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Danjuriqi" Type="varchar" MaxLength="50" />
+          <Property Name="Jiesuanyi" Type="varchar" MaxLength="20" />
+          <Property Name="Jiesuaner" Type="varchar" MaxLength="20" />
+          <Property Name="Jiesuansan" Type="varchar" MaxLength="20" />
+          <Property Name="Jineyi" Type="double" />
+          <Property Name="Jineer" Type="double" />
+          <Property Name="Jinesan" Type="double" />
+          <Property Name="Danjuhao" Type="int" />
+          <Property Name="Bibie" Type="varchar" MaxLength="20" />
+          <Property Name="Huilv" Type="double" />
+          <Property Name="Zhekoulv" Type="double" />
+          <Property Name="YSCKleixing" Type="varchar" MaxLength="20" />
+          <Property Name="Zhongzhizhangyue" Type="varchar" MaxLength="20" />
+          <Property Name="Pingzhengbianhao" Type="int" />
+          <Property Name="Suoshubumen" Type="varchar" MaxLength="20" />
+          <Property Name="Zhidanrenyuan" Type="varchar" MaxLength="20" />
+          <Property Name="Suoshuxiangmu" Type="varchar" MaxLength="20" />
+          <Property Name="Fuherenyuan" Type="varchar" MaxLength="20" />
+          <Property Name="Zidinlanone" Type="varchar" MaxLength="20" />
+          <Property Name="Zidinlantwo" Type="varchar" MaxLength="20" />
+          <Property Name="Remark" Type="varchar" MaxLength="100" />
+          <Property Name="aaa" Type="varchar" MaxLength="20" />
+          <Property Name="bbb" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tb_yingshouchogkuandnr">
+          <Key>
+            <PropertyRef Name="Lanhao" />
+          </Key>
+          <Property Name="Lanhao" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Danbie" Type="varchar" MaxLength="20" />
+          <Property Name="Yuandanriqi" Type="varchar" MaxLength="20" />
+          <Property Name="Yuandandanhao" Type="varchar" MaxLength="20" />
+          <Property Name="Fapiaohaoma" Type="varchar" MaxLength="20" />
+          <Property Name="Jiaoyiduixiang" Type="varchar" MaxLength="50" />
+          <Property Name="JiaoyiduixiangName" Type="varchar" MaxLength="50" />
+          <Property Name="Bumenbianhao" Type="int" />
+          <Property Name="Bumenmingcheng" Type="varchar" MaxLength="50" />
+          <Property Name="Yewurenyuan" Type="varchar" MaxLength="50" />
+          <Property Name="Xiangmumingchen" Type="varchar" MaxLength="50" />
+          <Property Name="Bibie" Type="varchar" MaxLength="20" />
+          <Property Name="Huilv" Type="double" />
+          <Property Name="Yuandanjine" Type="double" />
+          <Property Name="Xianxingyue" Type="double" />
+          <Property Name="Zherangjine" Type="double" />
+          <Property Name="Chongkuanjine" Type="double" />
+          <Property Name="Chongdijine" Type="double" />
+          <Property Name="qqq" Type="varchar" MaxLength="50" />
+          <Property Name="aaa" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_yushoukuand">
+          <Key>
+            <PropertyRef Name="Laiyuandanhao" />
+          </Key>
+          <Property Name="Yushoujine" Type="double" />
+          <Property Name="Laiyuanbie" Type="varchar" MaxLength="50" />
+          <Property Name="Laiyuandanhao" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Zhaiyao" Type="varchar" MaxLength="20" />
+          <Property Name="aaa" Type="varchar" MaxLength="50" />
+          <Property Name="bbb" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tuihuo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="CustName" Type="varchar" MaxLength="50" />
+          <Property Name="BillDate" Type="date" />
+          <Property Name="AddrName" Type="varchar" MaxLength="50" />
+          <Property Name="BillNO" Type="varchar" MaxLength="50" />
+          <Property Name="SaleClassName" Type="varchar" MaxLength="50" />
+          <Property Name="currname" Type="varchar" MaxLength="50" />
+          <Property Name="PriceofTax" Type="bit" />
+          <Property Name="ExchRate" Type="float" />
+          <Property Name="WareName" Type="varchar" MaxLength="50" />
+          <Property Name="HasForeignTeade" Type="varchar" MaxLength="50" />
+          <Property Name="VoucherNO" Type="varchar" MaxLength="50" />
+          <Property Name="IsDeduct" Type="bit" />
+          <Property Name="SalesName" Type="varchar" MaxLength="50" />
+          <Property Name="Maker" Type="varchar" MaxLength="50" />
+          <Property Name="Depayid" Type="varchar" MaxLength="50" />
+          <Property Name="Permitter" Type="varchar" MaxLength="50" />
+          <Property Name="ProectName" Type="varchar" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" MaxLength="50" />
+          <Property Name="AddField1" Type="varchar" MaxLength="50" />
+          <Property Name="AddField2" Type="varchar" MaxLength="50" />
+          <Property Name="ABC" Type="varchar" MaxLength="50" />
+          <Property Name="BCD" Type="varchar" MaxLength="50" />
+          <Property Name="CDE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="xbiao">
+          <Key>
+            <PropertyRef Name="SerNo" />
+          </Key>
+          <Property Name="SerNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProsID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProdSize" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriceOftax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sunit" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SQuantity" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SPrice" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Amount" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TaxRate" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TaxAmt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RateBalanceAmt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BalanceAmt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LocalBalanceAmt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TotaBalanceAmt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SourceType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SourceBillNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AmountithTax" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LQty" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FromNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsGift" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Remark" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="rema" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="xiangbiao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="varchar" MaxLength="20" />
+          <Property Name="Wuliaomc" Type="varchar" MaxLength="20" />
+          <Property Name="Xinhao" Type="varchar" MaxLength="20" />
+          <Property Name="Mc" Type="varchar" MaxLength="20" />
+          <Property Name="Shul" Type="int" />
+          <Property Name="Bibie" Type="int" />
+          <Property Name="Jinjia" Type="int" />
+          <Property Name="Money" Type="int" />
+          <Property Name="Danjia" Type="varchar" MaxLength="20" />
+          <Property Name="Jiner" Type="varchar" MaxLength="20" />
+          <Property Name="Xuqiu" Type="varchar" MaxLength="20" />
+          <Property Name="Jiany" Type="varchar" MaxLength="20" />
+          <Property Name="Caigoul" Type="int" />
+          <Property Name="Fenlu" Type="varchar" MaxLength="20" />
+          <Property Name="Laiyuan" Type="varchar" MaxLength="20" />
+          <Property Name="Danhao" Type="varchar" MaxLength="20" />
+          <Property Name="Js" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="xunjia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="varchar" MaxLength="20" />
+          <Property Name="Wuliaomc" Type="varchar" MaxLength="20" />
+          <Property Name="Xinhao" Type="varchar" MaxLength="20" />
+          <Property Name="Mc" Type="varchar" MaxLength="20" />
+          <Property Name="Shul" Type="int" />
+          <Property Name="Zhekou" Type="int" />
+          <Property Name="Danjia" Type="varchar" MaxLength="20" />
+          <Property Name="Jine" Type="varchar" MaxLength="20" />
+          <Property Name="Zhehsu" Type="varchar" MaxLength="20" />
+          <Property Name="Shuil" Type="varchar" MaxLength="20" />
+          <Property Name="Shuier" Type="int" />
+          <Property Name="Fenlu" Type="varchar" MaxLength="20" />
+          <Property Name="Hanshui" Type="varchar" MaxLength="20" />
+          <Property Name="Zengp" Type="varchar" MaxLength="20" />
+          <Property Name="Js" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="xunjiadan">
+          <Key>
+            <PropertyRef Name="gongyings" />
+          </Key>
+          <Property Name="gongyings" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Danjutime" Type="varchar" MaxLength="20" />
+          <Property Name="Gongyingsdizhi" Type="varchar" MaxLength="20" />
+          <Property Name="Danjuhaoma" Type="int" />
+          <Property Name="Times" Type="varchar" MaxLength="20" />
+          <Property Name="Bibie" Type="varchar" MaxLength="20" />
+          <Property Name="Shui" Type="varchar" MaxLength="20" />
+          <Property Name="Huilv" Type="varchar" MaxLength="20" />
+          <Property Name="Dankuang" Type="varchar" MaxLength="20" />
+          <Property Name="Dizhi" Type="varchar" MaxLength="20" />
+          <Property Name="Caigou" Type="varchar" MaxLength="20" />
+          <Property Name="Zhidan" Type="varchar" MaxLength="20" />
+          <Property Name="Bumen" Type="varchar" MaxLength="20" />
+          <Property Name="Fuhe" Type="varchar" MaxLength="20" />
+          <Property Name="Suoshu" Type="varchar" MaxLength="20" />
+          <Property Name="Biaotou" Type="varchar" MaxLength="20" />
+          <Property Name="Biaowei" Type="varchar" MaxLength="20" />
+          <Property Name="Zidinyi" Type="varchar" MaxLength="20" />
+          <Property Name="Zidiner" Type="varchar" MaxLength="20" />
+          <Property Name="Beuzhu" Type="varchar" MaxLength="20" />
+          <Property Name="Nsn" Type="varchar" MaxLength="20" />
+          <Property Name="Jsjs" Type="varchar" MaxLength="20" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="erpModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="erpEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="caigou" EntityType="erpModel.caigou" />
+          <EntitySet Name="caigoufentan_main" EntityType="erpModel.caigoufentan_main" />
+          <EntitySet Name="caigouruku_main" EntityType="erpModel.caigouruku_main" />
+          <EntitySet Name="caigoutuihuo_main" EntityType="erpModel.caigoutuihuo_main" />
+          <EntitySet Name="cangkubiao" EntityType="erpModel.cangkubiao" />
+          <EntitySet Name="cangkubiao2" EntityType="erpModel.cangkubiao2" />
+          <EntitySet Name="chuku" EntityType="erpModel.chuku" />
+          <EntitySet Name="custbill" EntityType="erpModel.custbill" />
+          <EntitySet Name="lbkxiangbiao" EntityType="erpModel.lbkxiangbiao" />
+          <EntitySet Name="mxotherdepots" EntityType="erpModel.mxotherdepots" />
+          <EntitySet Name="mxotherwarehousing" EntityType="erpModel.mxotherwarehousing" />
+          <EntitySet Name="mxsalesorder" EntityType="erpModel.mxsalesorder" />
+          <EntitySet Name="mxsalesquotations" EntityType="erpModel.mxsalesquotations" />
+          <EntitySet Name="otherdepots" EntityType="erpModel.otherdepots" />
+          <EntitySet Name="otherwarehousing" EntityType="erpModel.otherwarehousing" />
+          <EntitySet Name="salesorder" EntityType="erpModel.salesorder" />
+          <EntitySet Name="salesquotations" EntityType="erpModel.salesquotations" />
+          <EntitySet Name="t_store_io" EntityType="erpModel.t_store_io" />
+          <EntitySet Name="t_stores" EntityType="erpModel.t_stores" />
+          <EntitySet Name="tb_xiaoshoufapiaod" EntityType="erpModel.tb_xiaoshoufapiaod" />
+          <EntitySet Name="tb_xiaoshoufapiaonrd" EntityType="erpModel.tb_xiaoshoufapiaonrd" />
+          <EntitySet Name="tb_yingshouchogkuand" EntityType="erpModel.tb_yingshouchogkuand" />
+          <EntitySet Name="tb_yingshouchogkuandnr" EntityType="erpModel.tb_yingshouchogkuandnr" />
+          <EntitySet Name="tb_yushoukuand" EntityType="erpModel.tb_yushoukuand" />
+          <EntitySet Name="tuihuo" EntityType="erpModel.tuihuo" />
+          <EntitySet Name="xbiao" EntityType="erpModel.xbiao" />
+          <EntitySet Name="xiangbiao" EntityType="erpModel.xiangbiao" />
+          <EntitySet Name="xunjia" EntityType="erpModel.xunjia" />
+          <EntitySet Name="xunjiadan" EntityType="erpModel.xunjiadan" />
+        </EntityContainer>
+        <EntityType Name="caigou">
+          <Key>
+            <PropertyRef Name="Qinggou" />
+          </Key>
+          <Property Name="Qinggou" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjutime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuhaoma" Type="Int32" />
+          <Property Name="Dankuang" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Qingg" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhidan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fuhe" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bumen" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaotou" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaowei" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidinyi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidiner" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Beuzhu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jdsa" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="caigoufentan_main">
+          <Key>
+            <PropertyRef Name="BillNo" />
+          </Key>
+          <Property Name="BillNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" />
+          <Property Name="AssignStyle" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProofNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="WaitAmount" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="caigouruku_main">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddrID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" />
+          <Property Name="SaleClassID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceofTax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="WareID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasForeignTrade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProofNumber" Type="Int32" Nullable="false" />
+          <Property Name="AddField1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="SalesID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="caigoutuihuo_main">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddrID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" />
+          <Property Name="SaleClassID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceofTax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="WareID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasForeignTrade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsDeduct" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProofNumber" Type="Int32" Nullable="false" />
+          <Property Name="AddField1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="SalesID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="cangkubiao">
+          <Key>
+            <PropertyRef Name="CKBHao" />
+          </Key>
+          <Property Name="CKBHao" Type="Int32" Nullable="false" />
+          <Property Name="CKMCheng" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LXRYuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LXDHua" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CKDZhi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BZu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="cangkubiao2">
+          <Key>
+            <PropertyRef Name="CKBHao" />
+          </Key>
+          <Property Name="CKBHao" Type="Int32" Nullable="false" />
+          <Property Name="WLBHao" Type="Int32" />
+          <Property Name="WLSLiang" Type="Int32" />
+          <Property Name="BYZD1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BYZD2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BYZD3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="chuku">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="CustName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" />
+          <Property Name="AddrName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SaleClassName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="currname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceofTax" Type="Boolean" />
+          <Property Name="ExchRate" Type="Single" />
+          <Property Name="WareName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasForeignTeade" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasAutoTnv" Type="Boolean" />
+          <Property Name="SalesName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Depayid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProectName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ABC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BCD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CDE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="custbill">
+          <Key>
+            <PropertyRef Name="CustID" />
+          </Key>
+          <Property Name="CustID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FundBillNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceOftax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="InvoiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AffirmState" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="InvotypeId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurrID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CVoucherNO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Salesman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DeptID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UDef1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UDef2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="lbkxiangbiao">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="ProdID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="prodsize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="StdUnitName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SumNum" Type="Int32" />
+          <Property Name="discountunitprice" Type="Single" />
+          <Property Name="RateOfDiscount" Type="Single" />
+          <Property Name="price" Type="Single" />
+          <Property Name="moeny" Type="Single" />
+          <Property Name="BusiTaxRate" Type="Single" />
+          <Property Name="Tax" Type="Single" />
+          <Property Name="taxprice" Type="Single" />
+          <Property Name="batchUsed" Type="Int32" />
+          <Property Name="gift" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Invoicedetails" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="weikaipiao" Type="Int32" />
+          <Property Name="brmack" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="laiyuandanbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="laiyuandanhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ABC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BCD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CDE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mxotherdepots">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SUnit" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" Nullable="false" />
+          <Property Name="HaveBatch" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ItemRemark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mxotherwarehousing">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SUnit" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" Nullable="false" />
+          <Property Name="HaveBatch" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ItemRemark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="mxsalesorder">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SUnit" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="sQuantity" Type="Int32" Nullable="false" />
+          <Property Name="OldPrice" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Discount" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="sPrice" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VFTotal" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PreInDate" Type="DateTime" Nullable="false" />
+          <Property Name="QtyRemain" Type="Int32" Nullable="false" />
+          <Property Name="IsGift" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ItemRemark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="HasCombine" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TranType" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FromNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ManuQty" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mxsalesquotations">
+          <Key>
+            <PropertyRef Name="SerNO" />
+          </Key>
+          <Property Name="SerNO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdBusiTaxRate" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ItemRemark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="IsGift" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Discount" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TaxAmt" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UniName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Price" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OldPrice" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SQuantity" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="sPrice" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VFTotal" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SumBTaxAmt" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SumTax" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SumAmtATax" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="otherdepots">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AdjustDate" Type="DateTime" Nullable="false" />
+          <Property Name="WareName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillStyleName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SumQty" Type="Int32" Nullable="false" />
+          <Property Name="DepartName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Udef1" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Udef2" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="otherwarehousing">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AdjustDate" Type="DateTime" Nullable="false" />
+          <Property Name="WareName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillStyleName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SumQty" Type="Int32" Nullable="false" />
+          <Property Name="DepartName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Udef1" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Udef2" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="salesorder">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" />
+          <Property Name="CustBillNo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillStyleName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CustCurrencyName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CustMemo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CustAddress" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DepartName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="HeaderName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FooterName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserDef1" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserDef2" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillStatus" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PriceOfTax" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DueToFullName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PrepayDay" Type="DateTime" Nullable="false" />
+          <Property Name="GatherStyle" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AccMoth" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="GatherDelay" Type="Int32" Nullable="false" />
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="salesquotations">
+          <Key>
+            <PropertyRef Name="BillNO" />
+          </Key>
+          <Property Name="BillNO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" />
+          <Property Name="FormalCust" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CurCurrencyName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ExchRate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="OutAddress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceOfTax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ValiDAte" Type="DateTime" Nullable="false" />
+          <Property Name="HeaderName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FooterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PsnUerDef1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PsnUerDef2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CustMemo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MakerName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PermitterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SalesName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SerNO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_store_io">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Wuliaomc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Xinhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Mc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shul" Type="Int32" />
+          <Property Name="Danjia" Type="Int32" />
+          <Property Name="Zheshu" Type="Int32" />
+          <Property Name="Danj" Type="Int32" />
+          <Property Name="Money" Type="Int32" />
+          <Property Name="Shuil" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shuie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Hanshuimonet" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Yuru" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Weiruk" Type="Int32" />
+          <Property Name="Zengpin" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fenlu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Laiyuan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Sj" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="t_stores">
+          <Key>
+            <PropertyRef Name="gongyings" />
+          </Key>
+          <Property Name="gongyings" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Danjutime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Gongyingsdizhi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuhaoma" Type="Int32" />
+          <Property Name="Dindanleix" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bibie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shui" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Dankuang" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Dizhi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Caigou" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhidan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bumen" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fuhe" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Suoshu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaotou" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaowei" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidinyi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidiner" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Beuzhu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Ks" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_xiaoshoufapiaod">
+          <Key>
+            <PropertyRef Name="Kehu" />
+          </Key>
+          <Property Name="Kehu" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuriqi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuleixing" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuhaoma" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shifouhanshui" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fapiaohaoma" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fapiaodizhi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fapiaoleixing" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Heduizhuangtai" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Bibie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SRngzhengbianhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="Double" />
+          <Property Name="CBpingzhengbianhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Lanyi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Laner" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Daochuriqi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Daochurenyuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Beizhu" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Yewurenyuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Zhidanrenyuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Suoshubumen" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fuherenyuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Suoshuxiangmu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="aaa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bbb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_xiaoshoufapiaonrd">
+          <Key>
+            <PropertyRef Name="Lanhao" />
+          </Key>
+          <Property Name="Lanhao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Wuliaobianhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Wuliaomingcheng" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Guigexinghao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danweimingcheng" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Shuliang" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Danjia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Jine" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Shuilv" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Shuie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Hanshuijine" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Weichushuliang" Type="Double" />
+          <Property Name="Dingdanhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Zengpin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="aaa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bbb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_yingshouchogkuand">
+          <Key>
+            <PropertyRef Name="Kehu" />
+          </Key>
+          <Property Name="Kehu" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuriqi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Jiesuanyi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jiesuaner" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jiesuansan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jineyi" Type="Double" />
+          <Property Name="Jineer" Type="Double" />
+          <Property Name="Jinesan" Type="Double" />
+          <Property Name="Danjuhao" Type="Int32" />
+          <Property Name="Bibie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="Double" />
+          <Property Name="Zhekoulv" Type="Double" />
+          <Property Name="YSCKleixing" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhongzhizhangyue" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Pingzhengbianhao" Type="Int32" />
+          <Property Name="Suoshubumen" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhidanrenyuan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Suoshuxiangmu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fuherenyuan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidinlanone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidinlantwo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="aaa" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bbb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_yingshouchogkuandnr">
+          <Key>
+            <PropertyRef Name="Lanhao" />
+          </Key>
+          <Property Name="Lanhao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Danbie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Yuandanriqi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Yuandandanhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fapiaohaoma" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jiaoyiduixiang" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="JiaoyiduixiangName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Bumenbianhao" Type="Int32" />
+          <Property Name="Bumenmingcheng" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Yewurenyuan" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Xiangmumingchen" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Bibie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="Double" />
+          <Property Name="Yuandanjine" Type="Double" />
+          <Property Name="Xianxingyue" Type="Double" />
+          <Property Name="Zherangjine" Type="Double" />
+          <Property Name="Chongkuanjine" Type="Double" />
+          <Property Name="Chongdijine" Type="Double" />
+          <Property Name="qqq" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="aaa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_yushoukuand">
+          <Key>
+            <PropertyRef Name="Laiyuandanhao" />
+          </Key>
+          <Property Name="Yushoujine" Type="Double" />
+          <Property Name="Laiyuanbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Laiyuandanhao" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhaiyao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="aaa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bbb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tuihuo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="CustName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillDate" Type="DateTime" />
+          <Property Name="AddrName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BillNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SaleClassName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="currname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceofTax" Type="Boolean" />
+          <Property Name="ExchRate" Type="Single" />
+          <Property Name="WareName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HasForeignTeade" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VoucherNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsDeduct" Type="Boolean" />
+          <Property Name="SalesName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Maker" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Depayid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProectName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddField2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ABC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BCD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CDE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="xbiao">
+          <Key>
+            <PropertyRef Name="SerNo" />
+          </Key>
+          <Property Name="SerNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProsID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProdSize" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriceOftax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SQuantity" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SPrice" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxRate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TaxAmt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RateBalanceAmt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BalanceAmt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LocalBalanceAmt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TotaBalanceAmt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SourceType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SourceBillNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AmountithTax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LQty" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FromNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsGift" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Remark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="rema" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="xiangbiao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Wuliaomc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Xinhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Mc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shul" Type="Int32" />
+          <Property Name="Bibie" Type="Int32" />
+          <Property Name="Jinjia" Type="Int32" />
+          <Property Name="Money" Type="Int32" />
+          <Property Name="Danjia" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jiner" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Xuqiu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jiany" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Caigoul" Type="Int32" />
+          <Property Name="Fenlu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Laiyuan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Js" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="xunjia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Bianhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Wuliaomc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Xinhao" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Mc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shul" Type="Int32" />
+          <Property Name="Zhekou" Type="Int32" />
+          <Property Name="Danjia" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhehsu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shuil" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shuier" Type="Int32" />
+          <Property Name="Fenlu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Hanshui" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zengp" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Js" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="xunjiadan">
+          <Key>
+            <PropertyRef Name="gongyings" />
+          </Key>
+          <Property Name="gongyings" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjutime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Gongyingsdizhi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Danjuhaoma" Type="Int32" />
+          <Property Name="Times" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bibie" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Shui" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Huilv" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Dankuang" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Dizhi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Caigou" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zhidan" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Bumen" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Fuhe" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Suoshu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaotou" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Biaowei" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidinyi" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Zidiner" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Beuzhu" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Nsn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Jsjs" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="erpModelStoreContainer" CdmEntityContainer="erpEntities">
+          <EntitySetMapping Name="caigou">
+            <EntityTypeMapping TypeName="erpModel.caigou">
+              <MappingFragment StoreEntitySet="caigou">
+                <ScalarProperty Name="Qinggou" ColumnName="Qinggou" />
+                <ScalarProperty Name="Danjutime" ColumnName="Danjutime" />
+                <ScalarProperty Name="Danjuhaoma" ColumnName="Danjuhaoma" />
+                <ScalarProperty Name="Dankuang" ColumnName="Dankuang" />
+                <ScalarProperty Name="Qingg" ColumnName="Qingg" />
+                <ScalarProperty Name="Zhidan" ColumnName="Zhidan" />
+                <ScalarProperty Name="Fuhe" ColumnName="Fuhe" />
+                <ScalarProperty Name="Bumen" ColumnName="Bumen" />
+                <ScalarProperty Name="Biaotou" ColumnName="Biaotou" />
+                <ScalarProperty Name="Biaowei" ColumnName="Biaowei" />
+                <ScalarProperty Name="Zidinyi" ColumnName="Zidinyi" />
+                <ScalarProperty Name="Zidiner" ColumnName="Zidiner" />
+                <ScalarProperty Name="Beuzhu" ColumnName="Beuzhu" />
+                <ScalarProperty Name="Jdsa" ColumnName="Jdsa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="caigoufentan_main">
+            <EntityTypeMapping TypeName="erpModel.caigoufentan_main">
+              <MappingFragment StoreEntitySet="caigoufentan_main">
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="AssignStyle" ColumnName="AssignStyle" />
+                <ScalarProperty Name="ProofNumber" ColumnName="ProofNumber" />
+                <ScalarProperty Name="WaitAmount" ColumnName="WaitAmount" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="caigouruku_main">
+            <EntityTypeMapping TypeName="erpModel.caigouruku_main">
+              <MappingFragment StoreEntitySet="caigouruku_main">
+                <ScalarProperty Name="CustID" ColumnName="CustID" />
+                <ScalarProperty Name="AddrID" ColumnName="AddrID" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="SaleClassID" ColumnName="SaleClassID" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="PriceofTax" ColumnName="PriceofTax" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="WareID" ColumnName="WareID" />
+                <ScalarProperty Name="HasForeignTrade" ColumnName="HasForeignTrade" />
+                <ScalarProperty Name="ProofNumber" ColumnName="ProofNumber" />
+                <ScalarProperty Name="AddField1" ColumnName="AddField1" />
+                <ScalarProperty Name="AddField2" ColumnName="AddField2" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="caigoutuihuo_main">
+            <EntityTypeMapping TypeName="erpModel.caigoutuihuo_main">
+              <MappingFragment StoreEntitySet="caigoutuihuo_main">
+                <ScalarProperty Name="CustID" ColumnName="CustID" />
+                <ScalarProperty Name="AddrID" ColumnName="AddrID" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="SaleClassID" ColumnName="SaleClassID" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="PriceofTax" ColumnName="PriceofTax" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="WareID" ColumnName="WareID" />
+                <ScalarProperty Name="HasForeignTrade" ColumnName="HasForeignTrade" />
+                <ScalarProperty Name="IsDeduct" ColumnName="IsDeduct" />
+                <ScalarProperty Name="ProofNumber" ColumnName="ProofNumber" />
+                <ScalarProperty Name="AddField1" ColumnName="AddField1" />
+                <ScalarProperty Name="AddField2" ColumnName="AddField2" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SalesID" ColumnName="SalesID" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="DepartID" ColumnName="DepartID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cangkubiao">
+            <EntityTypeMapping TypeName="erpModel.cangkubiao">
+              <MappingFragment StoreEntitySet="cangkubiao">
+                <ScalarProperty Name="CKBHao" ColumnName="CKBHao" />
+                <ScalarProperty Name="CKMCheng" ColumnName="CKMCheng" />
+                <ScalarProperty Name="LXRYuan" ColumnName="LXRYuan" />
+                <ScalarProperty Name="LXDHua" ColumnName="LXDHua" />
+                <ScalarProperty Name="CKDZhi" ColumnName="CKDZhi" />
+                <ScalarProperty Name="BZu" ColumnName="BZu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cangkubiao2">
+            <EntityTypeMapping TypeName="erpModel.cangkubiao2">
+              <MappingFragment StoreEntitySet="cangkubiao2">
+                <ScalarProperty Name="CKBHao" ColumnName="CKBHao" />
+                <ScalarProperty Name="WLBHao" ColumnName="WLBHao" />
+                <ScalarProperty Name="WLSLiang" ColumnName="WLSLiang" />
+                <ScalarProperty Name="BYZD1" ColumnName="BYZD1" />
+                <ScalarProperty Name="BYZD2" ColumnName="BYZD2" />
+                <ScalarProperty Name="BYZD3" ColumnName="BYZD3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chuku">
+            <EntityTypeMapping TypeName="erpModel.chuku">
+              <MappingFragment StoreEntitySet="chuku">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CustName" ColumnName="CustName" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="AddrName" ColumnName="AddrName" />
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="SaleClassName" ColumnName="SaleClassName" />
+                <ScalarProperty Name="currname" ColumnName="currname" />
+                <ScalarProperty Name="PriceofTax" ColumnName="PriceofTax" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="WareName" ColumnName="WareName" />
+                <ScalarProperty Name="HasForeignTeade" ColumnName="HasForeignTeade" />
+                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
+                <ScalarProperty Name="HasAutoTnv" ColumnName="HasAutoTnv" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Depayid" ColumnName="Depayid" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="ProectName" ColumnName="ProectName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="AddField1" ColumnName="AddField1" />
+                <ScalarProperty Name="AddField2" ColumnName="AddField2" />
+                <ScalarProperty Name="ABC" ColumnName="ABC" />
+                <ScalarProperty Name="BCD" ColumnName="BCD" />
+                <ScalarProperty Name="CDE" ColumnName="CDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="custbill">
+            <EntityTypeMapping TypeName="erpModel.custbill">
+              <MappingFragment StoreEntitySet="custbill">
+                <ScalarProperty Name="CustID" ColumnName="CustID" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="Billno" ColumnName="Billno" />
+                <ScalarProperty Name="FundBillNo" ColumnName="FundBillNo" />
+                <ScalarProperty Name="PriceOftax" ColumnName="PriceOftax" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="AffirmState" ColumnName="AffirmState" />
+                <ScalarProperty Name="InvotypeId" ColumnName="InvotypeId" />
+                <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+                <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+                <ScalarProperty Name="CVoucherNO" ColumnName="CVoucherNO" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="UDef1" ColumnName="UDef1" />
+                <ScalarProperty Name="UDef2" ColumnName="UDef2" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lbkxiangbiao">
+            <EntityTypeMapping TypeName="erpModel.lbkxiangbiao">
+              <MappingFragment StoreEntitySet="lbkxiangbiao">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="prodsize" ColumnName="prodsize" />
+                <ScalarProperty Name="StdUnitName" ColumnName="StdUnitName" />
+                <ScalarProperty Name="SumNum" ColumnName="SumNum" />
+                <ScalarProperty Name="discountunitprice" ColumnName="discountunitprice" />
+                <ScalarProperty Name="RateOfDiscount" ColumnName="RateOfDiscount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="moeny" ColumnName="moeny" />
+                <ScalarProperty Name="BusiTaxRate" ColumnName="BusiTaxRate" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="taxprice" ColumnName="taxprice" />
+                <ScalarProperty Name="batchUsed" ColumnName="batchUsed" />
+                <ScalarProperty Name="gift" ColumnName="gift" />
+                <ScalarProperty Name="Invoicedetails" ColumnName="Invoicedetails" />
+                <ScalarProperty Name="weikaipiao" ColumnName="weikaipiao" />
+                <ScalarProperty Name="brmack" ColumnName="brmack" />
+                <ScalarProperty Name="laiyuandanbie" ColumnName="laiyuandanbie" />
+                <ScalarProperty Name="laiyuandanhao" ColumnName="laiyuandanhao" />
+                <ScalarProperty Name="ABC" ColumnName="ABC" />
+                <ScalarProperty Name="BCD" ColumnName="BCD" />
+                <ScalarProperty Name="CDE" ColumnName="CDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxotherdepots">
+            <EntityTypeMapping TypeName="erpModel.mxotherdepots">
+              <MappingFragment StoreEntitySet="mxotherdepots">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="SUnit" ColumnName="SUnit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="HaveBatch" ColumnName="HaveBatch" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxotherwarehousing">
+            <EntityTypeMapping TypeName="erpModel.mxotherwarehousing">
+              <MappingFragment StoreEntitySet="mxotherwarehousing">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="SUnit" ColumnName="SUnit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="HaveBatch" ColumnName="HaveBatch" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxsalesorder">
+            <EntityTypeMapping TypeName="erpModel.mxsalesorder">
+              <MappingFragment StoreEntitySet="mxsalesorder">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="SUnit" ColumnName="SUnit" />
+                <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
+                <ScalarProperty Name="PreInDate" ColumnName="PreInDate" />
+                <ScalarProperty Name="QtyRemain" ColumnName="QtyRemain" />
+                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+                <ScalarProperty Name="HasCombine" ColumnName="HasCombine" />
+                <ScalarProperty Name="TranType" ColumnName="TranType" />
+                <ScalarProperty Name="FromNO" ColumnName="FromNO" />
+                <ScalarProperty Name="ManuQty" ColumnName="ManuQty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mxsalesquotations">
+            <EntityTypeMapping TypeName="erpModel.mxsalesquotations">
+              <MappingFragment StoreEntitySet="mxsalesquotations">
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+                <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+                <ScalarProperty Name="ProdBusiTaxRate" ColumnName="ProdBusiTaxRate" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+                <ScalarProperty Name="UniName" ColumnName="UniName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="SQuantity" ColumnName="SQuantity" />
+                <ScalarProperty Name="sPrice" ColumnName="sPrice" />
+                <ScalarProperty Name="VFTotal" ColumnName="VFTotal" />
+                <ScalarProperty Name="SumBTaxAmt" ColumnName="SumBTaxAmt" />
+                <ScalarProperty Name="SumTax" ColumnName="SumTax" />
+                <ScalarProperty Name="SumAmtATax" ColumnName="SumAmtATax" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="otherdepots">
+            <EntityTypeMapping TypeName="erpModel.otherdepots">
+              <MappingFragment StoreEntitySet="otherdepots">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="AdjustDate" ColumnName="AdjustDate" />
+                <ScalarProperty Name="WareName" ColumnName="WareName" />
+                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="BillStyleName" ColumnName="BillStyleName" />
+                <ScalarProperty Name="SumQty" ColumnName="SumQty" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Udef1" ColumnName="Udef1" />
+                <ScalarProperty Name="Udef2" ColumnName="Udef2" />
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="otherwarehousing">
+            <EntityTypeMapping TypeName="erpModel.otherwarehousing">
+              <MappingFragment StoreEntitySet="otherwarehousing">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="AdjustDate" ColumnName="AdjustDate" />
+                <ScalarProperty Name="WareName" ColumnName="WareName" />
+                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="BillStyleName" ColumnName="BillStyleName" />
+                <ScalarProperty Name="SumQty" ColumnName="SumQty" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Udef1" ColumnName="Udef1" />
+                <ScalarProperty Name="Udef2" ColumnName="Udef2" />
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="salesorder">
+            <EntityTypeMapping TypeName="erpModel.salesorder">
+              <MappingFragment StoreEntitySet="salesorder">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="CustBillNo" ColumnName="CustBillNo" />
+                <ScalarProperty Name="BillStyleName" ColumnName="BillStyleName" />
+                <ScalarProperty Name="CustCurrencyName" ColumnName="CustCurrencyName" />
+                <ScalarProperty Name="CustMemo" ColumnName="CustMemo" />
+                <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="HeaderName" ColumnName="HeaderName" />
+                <ScalarProperty Name="FooterName" ColumnName="FooterName" />
+                <ScalarProperty Name="UserDef1" ColumnName="UserDef1" />
+                <ScalarProperty Name="UserDef2" ColumnName="UserDef2" />
+                <ScalarProperty Name="BillStatus" ColumnName="BillStatus" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="DueToFullName" ColumnName="DueToFullName" />
+                <ScalarProperty Name="PrepayDay" ColumnName="PrepayDay" />
+                <ScalarProperty Name="GatherStyle" ColumnName="GatherStyle" />
+                <ScalarProperty Name="AccMoth" ColumnName="AccMoth" />
+                <ScalarProperty Name="GatherDelay" ColumnName="GatherDelay" />
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="salesquotations">
+            <EntityTypeMapping TypeName="erpModel.salesquotations">
+              <MappingFragment StoreEntitySet="salesquotations">
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="FormalCust" ColumnName="FormalCust" />
+                <ScalarProperty Name="CurCurrencyName" ColumnName="CurCurrencyName" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="OutAddress" ColumnName="OutAddress" />
+                <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+                <ScalarProperty Name="ValiDAte" ColumnName="ValiDAte" />
+                <ScalarProperty Name="HeaderName" ColumnName="HeaderName" />
+                <ScalarProperty Name="FooterName" ColumnName="FooterName" />
+                <ScalarProperty Name="PsnUerDef1" ColumnName="PsnUerDef1" />
+                <ScalarProperty Name="PsnUerDef2" ColumnName="PsnUerDef2" />
+                <ScalarProperty Name="CustMemo" ColumnName="CustMemo" />
+                <ScalarProperty Name="MakerName" ColumnName="MakerName" />
+                <ScalarProperty Name="PermitterName" ColumnName="PermitterName" />
+                <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="SerNO" ColumnName="SerNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_store_io">
+            <EntityTypeMapping TypeName="erpModel.t_store_io">
+              <MappingFragment StoreEntitySet="t_store_io">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Bianhao" ColumnName="Bianhao" />
+                <ScalarProperty Name="Wuliaomc" ColumnName="Wuliaomc" />
+                <ScalarProperty Name="Xinhao" ColumnName="Xinhao" />
+                <ScalarProperty Name="Mc" ColumnName="Mc" />
+                <ScalarProperty Name="Shul" ColumnName="Shul" />
+                <ScalarProperty Name="Danjia" ColumnName="Danjia" />
+                <ScalarProperty Name="Zheshu" ColumnName="Zheshu" />
+                <ScalarProperty Name="Danj" ColumnName="Danj" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Shuil" ColumnName="Shuil" />
+                <ScalarProperty Name="Shuie" ColumnName="Shuie" />
+                <ScalarProperty Name="Hanshuimonet" ColumnName="Hanshuimonet" />
+                <ScalarProperty Name="Yuru" ColumnName="Yuru" />
+                <ScalarProperty Name="Weiruk" ColumnName="Weiruk" />
+                <ScalarProperty Name="Zengpin" ColumnName="Zengpin" />
+                <ScalarProperty Name="Fenlu" ColumnName="Fenlu" />
+                <ScalarProperty Name="Laiyuan" ColumnName="Laiyuan" />
+                <ScalarProperty Name="Danhao" ColumnName="Danhao" />
+                <ScalarProperty Name="Sj" ColumnName="Sj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_stores">
+            <EntityTypeMapping TypeName="erpModel.t_stores">
+              <MappingFragment StoreEntitySet="t_stores">
+                <ScalarProperty Name="gongyings" ColumnName="gongyings" />
+                <ScalarProperty Name="Danjutime" ColumnName="Danjutime" />
+                <ScalarProperty Name="Gongyingsdizhi" ColumnName="Gongyingsdizhi" />
+                <ScalarProperty Name="Danjuhaoma" ColumnName="Danjuhaoma" />
+                <ScalarProperty Name="Dindanleix" ColumnName="Dindanleix" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Shui" ColumnName="Shui" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="Dankuang" ColumnName="Dankuang" />
+                <ScalarProperty Name="Dizhi" ColumnName="Dizhi" />
+                <ScalarProperty Name="Caigou" ColumnName="Caigou" />
+                <ScalarProperty Name="Zhidan" ColumnName="Zhidan" />
+                <ScalarProperty Name="Bumen" ColumnName="Bumen" />
+                <ScalarProperty Name="Fuhe" ColumnName="Fuhe" />
+                <ScalarProperty Name="Suoshu" ColumnName="Suoshu" />
+                <ScalarProperty Name="Biaotou" ColumnName="Biaotou" />
+                <ScalarProperty Name="Biaowei" ColumnName="Biaowei" />
+                <ScalarProperty Name="Zidinyi" ColumnName="Zidinyi" />
+                <ScalarProperty Name="Zidiner" ColumnName="Zidiner" />
+                <ScalarProperty Name="Beuzhu" ColumnName="Beuzhu" />
+                <ScalarProperty Name="Ks" ColumnName="Ks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_xiaoshoufapiaod">
+            <EntityTypeMapping TypeName="erpModel.tb_xiaoshoufapiaod">
+              <MappingFragment StoreEntitySet="tb_xiaoshoufapiaod">
+                <ScalarProperty Name="Kehu" ColumnName="Kehu" />
+                <ScalarProperty Name="Danjuriqi" ColumnName="Danjuriqi" />
+                <ScalarProperty Name="Danjuleixing" ColumnName="Danjuleixing" />
+                <ScalarProperty Name="Danjuhaoma" ColumnName="Danjuhaoma" />
+                <ScalarProperty Name="Shifouhanshui" ColumnName="Shifouhanshui" />
+                <ScalarProperty Name="Fapiaohaoma" ColumnName="Fapiaohaoma" />
+                <ScalarProperty Name="Fapiaodizhi" ColumnName="Fapiaodizhi" />
+                <ScalarProperty Name="Fapiaoleixing" ColumnName="Fapiaoleixing" />
+                <ScalarProperty Name="Heduizhuangtai" ColumnName="Heduizhuangtai" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="SRngzhengbianhao" ColumnName="SRngzhengbianhao" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="CBpingzhengbianhao" ColumnName="CBpingzhengbianhao" />
+                <ScalarProperty Name="Lanyi" ColumnName="Lanyi" />
+                <ScalarProperty Name="Laner" ColumnName="Laner" />
+                <ScalarProperty Name="Daochuriqi" ColumnName="Daochuriqi" />
+                <ScalarProperty Name="Daochurenyuan" ColumnName="Daochurenyuan" />
+                <ScalarProperty Name="Beizhu" ColumnName="Beizhu" />
+                <ScalarProperty Name="Yewurenyuan" ColumnName="Yewurenyuan" />
+                <ScalarProperty Name="Zhidanrenyuan" ColumnName="Zhidanrenyuan" />
+                <ScalarProperty Name="Suoshubumen" ColumnName="Suoshubumen" />
+                <ScalarProperty Name="Fuherenyuan" ColumnName="Fuherenyuan" />
+                <ScalarProperty Name="Suoshuxiangmu" ColumnName="Suoshuxiangmu" />
+                <ScalarProperty Name="aaa" ColumnName="aaa" />
+                <ScalarProperty Name="bbb" ColumnName="bbb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_xiaoshoufapiaonrd">
+            <EntityTypeMapping TypeName="erpModel.tb_xiaoshoufapiaonrd">
+              <MappingFragment StoreEntitySet="tb_xiaoshoufapiaonrd">
+                <ScalarProperty Name="Lanhao" ColumnName="Lanhao" />
+                <ScalarProperty Name="Wuliaobianhao" ColumnName="Wuliaobianhao" />
+                <ScalarProperty Name="Wuliaomingcheng" ColumnName="Wuliaomingcheng" />
+                <ScalarProperty Name="Guigexinghao" ColumnName="Guigexinghao" />
+                <ScalarProperty Name="Danweimingcheng" ColumnName="Danweimingcheng" />
+                <ScalarProperty Name="Shuliang" ColumnName="Shuliang" />
+                <ScalarProperty Name="Danjia" ColumnName="Danjia" />
+                <ScalarProperty Name="Jine" ColumnName="Jine" />
+                <ScalarProperty Name="Shuilv" ColumnName="Shuilv" />
+                <ScalarProperty Name="Shuie" ColumnName="Shuie" />
+                <ScalarProperty Name="Hanshuijine" ColumnName="Hanshuijine" />
+                <ScalarProperty Name="Weichushuliang" ColumnName="Weichushuliang" />
+                <ScalarProperty Name="Dingdanhao" ColumnName="Dingdanhao" />
+                <ScalarProperty Name="Zengpin" ColumnName="Zengpin" />
+                <ScalarProperty Name="Beizhu" ColumnName="Beizhu" />
+                <ScalarProperty Name="aaa" ColumnName="aaa" />
+                <ScalarProperty Name="bbb" ColumnName="bbb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yingshouchogkuand">
+            <EntityTypeMapping TypeName="erpModel.tb_yingshouchogkuand">
+              <MappingFragment StoreEntitySet="tb_yingshouchogkuand">
+                <ScalarProperty Name="Kehu" ColumnName="Kehu" />
+                <ScalarProperty Name="Danjuriqi" ColumnName="Danjuriqi" />
+                <ScalarProperty Name="Jiesuanyi" ColumnName="Jiesuanyi" />
+                <ScalarProperty Name="Jiesuaner" ColumnName="Jiesuaner" />
+                <ScalarProperty Name="Jiesuansan" ColumnName="Jiesuansan" />
+                <ScalarProperty Name="Jineyi" ColumnName="Jineyi" />
+                <ScalarProperty Name="Jineer" ColumnName="Jineer" />
+                <ScalarProperty Name="Jinesan" ColumnName="Jinesan" />
+                <ScalarProperty Name="Danjuhao" ColumnName="Danjuhao" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="Zhekoulv" ColumnName="Zhekoulv" />
+                <ScalarProperty Name="YSCKleixing" ColumnName="YSCKleixing" />
+                <ScalarProperty Name="Zhongzhizhangyue" ColumnName="Zhongzhizhangyue" />
+                <ScalarProperty Name="Pingzhengbianhao" ColumnName="Pingzhengbianhao" />
+                <ScalarProperty Name="Suoshubumen" ColumnName="Suoshubumen" />
+                <ScalarProperty Name="Zhidanrenyuan" ColumnName="Zhidanrenyuan" />
+                <ScalarProperty Name="Suoshuxiangmu" ColumnName="Suoshuxiangmu" />
+                <ScalarProperty Name="Fuherenyuan" ColumnName="Fuherenyuan" />
+                <ScalarProperty Name="Zidinlanone" ColumnName="Zidinlanone" />
+                <ScalarProperty Name="Zidinlantwo" ColumnName="Zidinlantwo" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="aaa" ColumnName="aaa" />
+                <ScalarProperty Name="bbb" ColumnName="bbb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yingshouchogkuandnr">
+            <EntityTypeMapping TypeName="erpModel.tb_yingshouchogkuandnr">
+              <MappingFragment StoreEntitySet="tb_yingshouchogkuandnr">
+                <ScalarProperty Name="Lanhao" ColumnName="Lanhao" />
+                <ScalarProperty Name="Danbie" ColumnName="Danbie" />
+                <ScalarProperty Name="Yuandanriqi" ColumnName="Yuandanriqi" />
+                <ScalarProperty Name="Yuandandanhao" ColumnName="Yuandandanhao" />
+                <ScalarProperty Name="Fapiaohaoma" ColumnName="Fapiaohaoma" />
+                <ScalarProperty Name="Jiaoyiduixiang" ColumnName="Jiaoyiduixiang" />
+                <ScalarProperty Name="JiaoyiduixiangName" ColumnName="JiaoyiduixiangName" />
+                <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+                <ScalarProperty Name="Bumenmingcheng" ColumnName="Bumenmingcheng" />
+                <ScalarProperty Name="Yewurenyuan" ColumnName="Yewurenyuan" />
+                <ScalarProperty Name="Xiangmumingchen" ColumnName="Xiangmumingchen" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="Yuandanjine" ColumnName="Yuandanjine" />
+                <ScalarProperty Name="Xianxingyue" ColumnName="Xianxingyue" />
+                <ScalarProperty Name="Zherangjine" ColumnName="Zherangjine" />
+                <ScalarProperty Name="Chongkuanjine" ColumnName="Chongkuanjine" />
+                <ScalarProperty Name="Chongdijine" ColumnName="Chongdijine" />
+                <ScalarProperty Name="qqq" ColumnName="qqq" />
+                <ScalarProperty Name="aaa" ColumnName="aaa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_yushoukuand">
+            <EntityTypeMapping TypeName="erpModel.tb_yushoukuand">
+              <MappingFragment StoreEntitySet="tb_yushoukuand">
+                <ScalarProperty Name="Yushoujine" ColumnName="Yushoujine" />
+                <ScalarProperty Name="Laiyuanbie" ColumnName="Laiyuanbie" />
+                <ScalarProperty Name="Laiyuandanhao" ColumnName="Laiyuandanhao" />
+                <ScalarProperty Name="Zhaiyao" ColumnName="Zhaiyao" />
+                <ScalarProperty Name="aaa" ColumnName="aaa" />
+                <ScalarProperty Name="bbb" ColumnName="bbb" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tuihuo">
+            <EntityTypeMapping TypeName="erpModel.tuihuo">
+              <MappingFragment StoreEntitySet="tuihuo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CustName" ColumnName="CustName" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="AddrName" ColumnName="AddrName" />
+                <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+                <ScalarProperty Name="SaleClassName" ColumnName="SaleClassName" />
+                <ScalarProperty Name="currname" ColumnName="currname" />
+                <ScalarProperty Name="PriceofTax" ColumnName="PriceofTax" />
+                <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+                <ScalarProperty Name="WareName" ColumnName="WareName" />
+                <ScalarProperty Name="HasForeignTeade" ColumnName="HasForeignTeade" />
+                <ScalarProperty Name="VoucherNO" ColumnName="VoucherNO" />
+                <ScalarProperty Name="IsDeduct" ColumnName="IsDeduct" />
+                <ScalarProperty Name="SalesName" ColumnName="SalesName" />
+                <ScalarProperty Name="Maker" ColumnName="Maker" />
+                <ScalarProperty Name="Depayid" ColumnName="Depayid" />
+                <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+                <ScalarProperty Name="ProectName" ColumnName="ProectName" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="AddField1" ColumnName="AddField1" />
+                <ScalarProperty Name="AddField2" ColumnName="AddField2" />
+                <ScalarProperty Name="ABC" ColumnName="ABC" />
+                <ScalarProperty Name="BCD" ColumnName="BCD" />
+                <ScalarProperty Name="CDE" ColumnName="CDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xbiao">
+            <EntityTypeMapping TypeName="erpModel.xbiao">
+              <MappingFragment StoreEntitySet="xbiao">
+                <ScalarProperty Name="SerNo" ColumnName="SerNo" />
+                <ScalarProperty Name="ProsID" ColumnName="ProsID" />
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+                <ScalarProperty Name="PriceOftax" ColumnName="PriceOftax" />
+                <ScalarProperty Name="Sunit" ColumnName="Sunit" />
+                <ScalarProperty Name="SQuantity" ColumnName="SQuantity" />
+                <ScalarProperty Name="SPrice" ColumnName="SPrice" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+                <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+                <ScalarProperty Name="RateBalanceAmt" ColumnName="RateBalanceAmt" />
+                <ScalarProperty Name="BalanceAmt" ColumnName="BalanceAmt" />
+                <ScalarProperty Name="LocalBalanceAmt" ColumnName="LocalBalanceAmt" />
+                <ScalarProperty Name="TotaBalanceAmt" ColumnName="TotaBalanceAmt" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+                <ScalarProperty Name="SourceBillNo" ColumnName="SourceBillNo" />
+                <ScalarProperty Name="AmountithTax" ColumnName="AmountithTax" />
+                <ScalarProperty Name="LQty" ColumnName="LQty" />
+                <ScalarProperty Name="FromNo" ColumnName="FromNo" />
+                <ScalarProperty Name="IsGift" ColumnName="IsGift" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="rema" ColumnName="rema" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xiangbiao">
+            <EntityTypeMapping TypeName="erpModel.xiangbiao">
+              <MappingFragment StoreEntitySet="xiangbiao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Bianhao" ColumnName="Bianhao" />
+                <ScalarProperty Name="Wuliaomc" ColumnName="Wuliaomc" />
+                <ScalarProperty Name="Xinhao" ColumnName="Xinhao" />
+                <ScalarProperty Name="Mc" ColumnName="Mc" />
+                <ScalarProperty Name="Shul" ColumnName="Shul" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Jinjia" ColumnName="Jinjia" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Danjia" ColumnName="Danjia" />
+                <ScalarProperty Name="Jiner" ColumnName="Jiner" />
+                <ScalarProperty Name="Xuqiu" ColumnName="Xuqiu" />
+                <ScalarProperty Name="Jiany" ColumnName="Jiany" />
+                <ScalarProperty Name="Caigoul" ColumnName="Caigoul" />
+                <ScalarProperty Name="Fenlu" ColumnName="Fenlu" />
+                <ScalarProperty Name="Laiyuan" ColumnName="Laiyuan" />
+                <ScalarProperty Name="Danhao" ColumnName="Danhao" />
+                <ScalarProperty Name="Js" ColumnName="Js" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xunjia">
+            <EntityTypeMapping TypeName="erpModel.xunjia">
+              <MappingFragment StoreEntitySet="xunjia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Bianhao" ColumnName="Bianhao" />
+                <ScalarProperty Name="Wuliaomc" ColumnName="Wuliaomc" />
+                <ScalarProperty Name="Xinhao" ColumnName="Xinhao" />
+                <ScalarProperty Name="Mc" ColumnName="Mc" />
+                <ScalarProperty Name="Shul" ColumnName="Shul" />
+                <ScalarProperty Name="Zhekou" ColumnName="Zhekou" />
+                <ScalarProperty Name="Danjia" ColumnName="Danjia" />
+                <ScalarProperty Name="Jine" ColumnName="Jine" />
+                <ScalarProperty Name="Zhehsu" ColumnName="Zhehsu" />
+                <ScalarProperty Name="Shuil" ColumnName="Shuil" />
+                <ScalarProperty Name="Shuier" ColumnName="Shuier" />
+                <ScalarProperty Name="Fenlu" ColumnName="Fenlu" />
+                <ScalarProperty Name="Hanshui" ColumnName="Hanshui" />
+                <ScalarProperty Name="Zengp" ColumnName="Zengp" />
+                <ScalarProperty Name="Js" ColumnName="Js" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xunjiadan">
+            <EntityTypeMapping TypeName="erpModel.xunjiadan">
+              <MappingFragment StoreEntitySet="xunjiadan">
+                <ScalarProperty Name="gongyings" ColumnName="gongyings" />
+                <ScalarProperty Name="Danjutime" ColumnName="Danjutime" />
+                <ScalarProperty Name="Gongyingsdizhi" ColumnName="Gongyingsdizhi" />
+                <ScalarProperty Name="Danjuhaoma" ColumnName="Danjuhaoma" />
+                <ScalarProperty Name="Times" ColumnName="Times" />
+                <ScalarProperty Name="Bibie" ColumnName="Bibie" />
+                <ScalarProperty Name="Shui" ColumnName="Shui" />
+                <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+                <ScalarProperty Name="Dankuang" ColumnName="Dankuang" />
+                <ScalarProperty Name="Dizhi" ColumnName="Dizhi" />
+                <ScalarProperty Name="Caigou" ColumnName="Caigou" />
+                <ScalarProperty Name="Zhidan" ColumnName="Zhidan" />
+                <ScalarProperty Name="Bumen" ColumnName="Bumen" />
+                <ScalarProperty Name="Fuhe" ColumnName="Fuhe" />
+                <ScalarProperty Name="Suoshu" ColumnName="Suoshu" />
+                <ScalarProperty Name="Biaotou" ColumnName="Biaotou" />
+                <ScalarProperty Name="Biaowei" ColumnName="Biaowei" />
+                <ScalarProperty Name="Zidinyi" ColumnName="Zidinyi" />
+                <ScalarProperty Name="Zidiner" ColumnName="Zidiner" />
+                <ScalarProperty Name="Beuzhu" ColumnName="Beuzhu" />
+                <ScalarProperty Name="Nsn" ColumnName="Nsn" />
+                <ScalarProperty Name="Jsjs" ColumnName="Jsjs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE36AA05-3F95-4F48-8737-A580FA060D03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaiGou\CG_DinDanService.cs" />
+    <Compile Include="CaiGou\CG_FaPiaoService.cs" />
+    <Compile Include="CaiGou\CG_FenTanService.cs" />
+    <Compile Include="CaiGou\CG_QingGouService.cs" />
+    <Compile Include="CaiGou\CG_RuKuService.cs" />
+    <Compile Include="CaiGou\CG_TuiHuoService.cs" />
+    <Compile Include="CaiGou\CG_XunJiaService.cs" />
+    <Compile Include="CaiGou\CG_YingFuChongKuanService.cs" />
+    <Compile Include="CaiGou\CG_YuFuChongKuanService.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="JiBen\JB_BuMenService.cs" />
+    <Compile Include="JiBen\JB_CangKuService.cs" />
+    <Compile Include="JiBen\JB_DanJuTypeService.cs" />
+    <Compile Include="JiBen\JB_GYS_Service.cs" />
+    <Compile Include="JiBen\JB_GYS_typeService.cs" />
+    <Compile Include="JiBen\JB_JiLiangDanWeiService.cs" />
+    <Compile Include="JiBen\JB_KeHuZiLiaoService.cs" />
+    <Compile Include="JiBen\JB_RenYuanZhuWenJianService.cs" />
+    <Compile Include="JiBen\JB_WuLiaoTypeService.cs" />
+    <Compile Include="JiBen\JB_WuLiaoWeiHuService.cs" />
+    <Compile Include="JiBen\JB_WuLiaoZhuWenJianService.cs" />
+    <Compile Include="KuCun\KC_DiaoBoService.cs" />
+    <Compile Include="KuCun\KC_PanDianService.cs" />
+    <Compile Include="KuCun\KC_TiaoJiaService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XiaoShou\XS_ChuKuService.cs" />
+    <Compile Include="XiaoShou\XS_DinDanService.cs" />
+    <Compile Include="XiaoShou\XS_FaPiaoService.cs" />
+    <Compile Include="XiaoShou\XS_TuiHuoService.cs" />
+    <Compile Include="XiaoShou\XS_YingShouChongKuanService.cs" />
+    <Compile Include="XiaoShou\XS_YuShouKuanService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{c62a99ff-cf08-41c9-9407-c1d1cdca9795}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
